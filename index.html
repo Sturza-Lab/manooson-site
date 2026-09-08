@@ -7,6 +7,7 @@
 <title>MANOO SON - Live Percussion Show</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C9A24B' stroke-width='6'/%3E%3C/svg%3E">
 <meta name="description" content="MANOO SON turns a DJ set into a moment the whole crowd feels. Live Afro House percussion for clubs, sunset parties and luxury events. Book on WhatsApp.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com; base-uri 'self'; form-action 'self'; object-src 'none'">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -491,6 +492,30 @@
   // to publish anything it can't actually persist for other visitors.
   var firebaseConfig = null; // TODO: paste real Firebase config here when Мария provides it
 
+  // SECURITY: reviews are visitor-submitted text - always render with textContent /
+  // DOM properties, NEVER string-concatenated into innerHTML. This is the one
+  // real injection surface on this site (a malicious "review" could otherwise
+  // plant a <script>/<img onerror> payload that runs for every visitor). Firestore
+  // security rules on the backend must also cap field length/type - client-side
+  // maxlength alone is not enforcement, see reviews-feature.md.
+  function renderReview(track, data){
+    var card = document.createElement('div');
+    card.className = 'review-card';
+    var txt = document.createElement('p');
+    txt.className = 'txt';
+    txt.textContent = '"' + data.text + '"';
+    var name = document.createElement('div');
+    name.className = 'name';
+    name.textContent = data.name;
+    var role = document.createElement('div');
+    role.className = 'role';
+    role.textContent = data.role;
+    card.appendChild(txt);
+    card.appendChild(name);
+    card.appendChild(role);
+    track.appendChild(card);
+  }
+
   var form = document.getElementById('reviewForm');
   var msg = document.getElementById('reviewMsg');
   form.addEventListener('submit', function(e){
@@ -501,7 +526,9 @@
       msg.textContent = "Thanks! Review storage isn't connected yet on this preview - it'll go live once we finish setup.";
       return;
     }
-    // Real Firestore write happens here once firebaseConfig is set.
+    // Real Firestore write happens here once firebaseConfig is set, then call
+    // renderReview(document.getElementById('reviewTrack'), {name, role, text})
+    // - never rebuild this with innerHTML/string concatenation.
   });
 })();
 </script>
