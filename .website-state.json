@@ -46,6 +46,19 @@
       "approved": false,
       "file": "copy.md",
       "ts": 1788857544
+    },
+    "4_visual": {
+      "approved": true,
+      "direction": "frontend-design (Design.md уже заперт в Blueprint, Stitch не нужен), кинематографичный видео-герой + редакционные паузы Cuebur + неон-магента",
+      "ts": 1788857727
+    },
+    "5_tokens": {
+      "file": "Design.md",
+      "ts": 1788857727
+    },
+    "6_build": {
+      "file": "index.html",
+      "ts": 1788858275
     }
   },
   "screens": [
