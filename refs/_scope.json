@@ -1,0 +1,10 @@
+{
+  "site_type": "landing",
+  "niche": "solo live percussion / instrument-over-DJ booking act",
+  "markets": ["EN", "international"],
+  "funnel_layer": "booking EPK",
+  "etalon_definition": "живой сайт того же типа (соло-артист, живой инструмент поверх DJ-сета/электроники, бронирование на события/клубы), доказавший себя (реальные площадки/туры)",
+  "seed_names": ["ROMB-Drums-Site (собственный проверенный объект семьи, Пул A голова)", "Tribal DreamZ", "Mili Sax", "DJ Sax Live", "Cuebur", "Showbott Drums+Decks"],
+  "screen_blocks": ["hero", "about/bio", "hear-the-difference", "venues/proof", "booking-cta", "gallery"],
+  "per_screen_target": 10
+}

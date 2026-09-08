@@ -1,0 +1,92 @@
+{
+  "site_type": "landing",
+  "named_core_required": [],
+  "min_exemplars": 3,
+  "board_target": 10,
+  "exemplars": [
+    {
+      "name": "Romb Drums",
+      "url": "https://rombdrums.rombmusic.com/",
+      "type": "landing",
+      "funnel_layer": "booking EPK",
+      "role": "exemplar",
+      "screen": "sitewide",
+      "screenshot": "rombdrums-hero.png",
+      "why_works": "Собственный проверенный объект семьи Марии того же типа (live percussion + DJ booking): агрессивный H1-обещание + двойной CTA, proof-бар с реальными площадками сразу под героем, аудио-блок 'без нас/с нами', мраморный шрифт Fraunces на тёмном фоне с винным/золотым акцентом, подвал с кнопками скачать райдеры и Instagram-хендлы.",
+      "niche_relevant": "Тот же жанр (live percussion поверх DJ-сета), тот же формат монетизации (booking по запросу), голова Пула A по закону эталона."
+    },
+    {
+      "name": "Mili Sax",
+      "url": "https://www.milisax.com/",
+      "type": "landing",
+      "funnel_layer": "booking EPK",
+      "role": "exemplar",
+      "screen": "sitewide",
+      "screenshot": "milisax-hero.png",
+      "why_works": "Премиальный красно-чёрный дизайн с крупной плашечной типографикой 'TO HEAR ME'; блок реальных дат/площадок тура с статусом RSVP работает как живой proof; секция 'WHO IS MILI' — короткие абзацы-факты (лейблы, коллаборации), не вода; чёткий контактный блок с раздельными email на PR и букинг.",
+      "niche_relevant": "Точный тип: соло-артистка играет живой саксофон поверх DJ-сета, международный фестивальный букинг — прямой аналог формата Manusan."
+    },
+    {
+      "name": "DJ Sax Live",
+      "url": "https://www.djsaxlive.com/",
+      "type": "landing",
+      "funnel_layer": "booking EPK",
+      "role": "exemplar",
+      "screen": "sitewide",
+      "screenshot": "djsaxlive-hero.png",
+      "why_works": "Крупный белый леттеринг поверх клубного фото сразу с CTA 'Book now'; блок из трёх карточек-отзывов клиентов; встроенная форма брони прямо на странице (имя/email/дата/место/комментарий) — снимает трение до перехода в мессенджер.",
+      "niche_relevant": "Тот же формат (живой саксофон + DJ на свадьбах/корпоративах), показывает паттерн 'форма брони на самой странице' и отзывы-карточки, которых пока нет у нас."
+    },
+    {
+      "name": "Drums+Decks",
+      "url": "https://showbott.com/artist/drums-and-decks/",
+      "type": "landing",
+      "funnel_layer": "booking EPK",
+      "role": "exemplar",
+      "screen": "sitewide",
+      "screenshot": "drumsdecks-hero.png",
+      "why_works": "Профиль в агентском маркетплейсе (Showbott), не самостоятельный сайт — дизайн слабый (шаблонный тил/розовый), но текст-позиционирование точное: 'Mobile party DJ and live percussion package for hire in clubs, at weddings and events' — готовая формула для нашего подзаголовка.",
+      "niche_relevant": "Буквально тот же продукт (перкуссия+DJ дуэт для клубов/свадеб), полезен для словаря позиционирования, не для дизайна — площадка слабее нашей планки."
+    },
+    {
+      "name": "Tribal DreamZ",
+      "url": "https://tribaldreamz.com/",
+      "type": "landing",
+      "funnel_layer": "booking EPK",
+      "role": "exemplar",
+      "screen": "sitewide",
+      "screenshot": "tribaldreamz-hero.png",
+      "why_works": "Шаблонный конструктор (GoDaddy Airo) — жёлто-чёрная графити-типографика поверх портретного фото, структура hero→bio→events→contact. Полезен как нижняя граница: показывает, как выглядит 'generic шаблон' в нашей нише, чтобы точно не повторить.",
+      "niche_relevant": "Тот же архетип артиста — соло DJ/перкуссионист, afro-house, фестивальный тур — но дизайн ниже нашей целевой планки, антипаттерн-референс."
+    },
+    {
+      "name": "Cuebur",
+      "url": "https://cuebur.com/",
+      "type": "landing",
+      "funnel_layer": "artist site",
+      "role": "exemplar",
+      "screen": "sitewide",
+      "screenshot": "cuebur-hero.png",
+      "why_works": "Редакционный премиальный дизайн: тёмный герой со статус-строкой (SA · 2010+ · DJ · Now), кремовые вставки-паузы между тёмными блоками, таймлайн карьеры карточками по годам, секция 'Press, bookings, and collaborations' с чёткой таблицей контактов и материалов для прессы.",
+      "niche_relevant": "Та же сцена Afro House, тот же уровень международного букинга — не Пул A (чистый DJ/продюсер без живого инструмента), но лучший найденный образец ПЛАНКИ дизайна и структуры proof/press-блока."
+    },
+    {
+      "name": "Don Diablo",
+      "url": "https://www.dondiablo.com/",
+      "type": "landing",
+      "funnel_layer": "artist site",
+      "role": "exemplar",
+      "screen": "hero",
+      "screenshot": "dondiablo-hero.png",
+      "why_works": "Кинематографичный full-bleed фестивальный кадр (огненные пиротехнические столбы) как герой, минималистичная моноширинная типографика навигации, живой countdown-таймер до следующего выступления с городом/датой площадки в углу экрана.",
+      "niche_relevant": "Топ-уровень мирового DJ-артиста — не Пул A (студийный/фестивальный DJ без живой перкуссии), взят ТОЛЬКО как образец кинематографичного героя и таймера ближайшего события, форма не смыслы."
+    }
+  ],
+  "methods": [],
+  "shortfall": {
+    "found": 7,
+    "target": 10,
+    "reason": "Ниша 'соло живой перкуссионист поверх DJ-сета с собственным брендовым сайтом' узкая - большинство похожих услуг живут как профили в агентствах-маркетплейсах (Contraband Events, Scarlett Entertainment, GigSalad, Tailored Entertainment, Live Entertainment UK), а не как самостоятельные брендовые сайты одного артиста. Из проверенных кандидатов отсеяны: bjonesdj.com (рендер сломан, пустые блоки, не читается), агентства-маркетплейсы (не тип 'сайт одного артиста', а каталог), 'Live Percussion Afrobeat Groove' на stagend.com (профиль на бирже музыкантов, не отдельный сайт).",
+    "searched": ["contrabandevents.com (агентство-маркетплейс, не тип 'сайт одного артиста' - reject)", "scarlettentertainment.com (агентство-маркетплейс - reject)", "gigsalad.com (биржа исполнителей, не брендовый сайт артиста - reject)", "tailored-entertainment.com (агентство-маркетплейс - reject)", "live-entertainment.co.uk (агентство-маркетплейс - reject)", "it.stagend.com (профиль на бирже музыкантов Stagend, не отдельный сайт - reject)", "bjonesdj.com (проверен, рендер сломан - пустые блоки, контент не читается)", "alpharhythmroots.com (студия/букинг-агент африканской перкуссии для съёмок, не наш тип услуги - reject)"]
+  }
+}

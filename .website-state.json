@@ -18,7 +18,17 @@
       "type": "landing",
       "target_action": "whatsapp_booking",
       "file": "brief.md",
-      "ts": 1788855424
+      "ts": 1788855985,
+      "approved": true
+    },
+    "1_interview": {
+      "file": "interview.md",
+      "ts": 1788856040
+    },
+    "2b_reference": {
+      "approved": true,
+      "board": "refs",
+      "ts": 1788856843
     }
   }
 }
