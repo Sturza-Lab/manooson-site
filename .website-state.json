@@ -65,111 +65,122 @@
     {
       "name": "hero",
       "role": "захват+оффер",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "video",
       "role": "видео-showcase",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "proof-bar",
       "role": "снятие возражения об уровне",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "about",
       "role": "био/факты",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "hear-the-difference",
       "role": "аудио-доказательство",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "formats-styles",
       "role": "снятие возражения о формате",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "venues-wall",
       "role": "масштаб через объём",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "photo-gallery",
       "role": "вторичный визуал",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "reviews",
       "role": "соц.доказательство чужим голосом",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "booking-cta",
       "role": "финальная конверсия",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     },
     {
       "name": "footer",
       "role": "райдеры+соцсети",
-      "status": "copy",
+      "status": "done",
       "score": null,
       "approvals": [
         "concept",
-        "copy"
+        "copy",
+        "design"
       ]
     }
   ],
