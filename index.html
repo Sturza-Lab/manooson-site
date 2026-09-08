@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>if('scrollRestoration' in history){ history.scrollRestoration = 'manual'; } if(!location.hash){ window.scrollTo(0,0); }</script>
 <title>MANOO SON - Live Percussion Show</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C9A24B' stroke-width='6'/%3E%3C/svg%3E">
 <meta name="description" content="MANOO SON turns a DJ set into a moment the whole crowd feels. Live Afro House percussion for clubs, sunset parties and luxury events. Book on WhatsApp.">
@@ -398,6 +399,7 @@
 
 <script>
 (function(){
+  if(!location.hash){ window.addEventListener('load', function(){ window.scrollTo(0,0); }); }
   var videos = ["IMG_4846","IMG_3659","IMG_4745","IMG_3483","IMG_3714","IMG_3701","IMG_6536"];
   var grid = document.getElementById('videoGrid');
   function playInline(tile, name){
