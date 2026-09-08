@@ -33,14 +33,29 @@ facts:
     source: внешний-пруф
     proof_link: "публичный пост Instagram @manooson.live, 03.09.2026"
     status: confirmed
-  - claim: "Жанр — Afro House Drums, Tribal Beats x Club Culture"
+  - claim: "Жанр — Afro House Drums, Tribal Beats x Club Culture; также Melodic House, Organic House, Bollywood House Remixes"
     value: "Afro House Drums"
-    source: внешний-пруф
-    proof_link: "bio Instagram @manooson.live"
+    source: подтверждено-экспертом
+    proof_link: "официальный Press Kit MANOO_SON_PressKit.pdf"
     status: confirmed
   - claim: "Соло-проект, отдельно от дуэта RomBBeat"
     value: "solo"
     source: подтверждено-экспертом
+    status: confirmed
+  - claim: "Базируется в Гоа, Индия; регулярно выступает в Индии и России (Гоа, Пуне, Хайдарабад, Манали, Лакхнау, Москва, Санкт-Петербург)"
+    value: "Goa, India + India/Russia tour circuit"
+    source: подтверждено-экспертом
+    proof_link: "официальный Press Kit"
+    status: confirmed
+  - claim: "Выступал на площадках: JW Marriott, W Hotel, OCCO, Raeeth, Purple Martini, Mayan, Tikitii, Dubki, Noah, Romeo Lane, Thalassa, Titlie, Tomatoes, Summer House, Bastian Riviera, Bastian Garden, Moai, Kaze, Zion"
+    value: "venue list"
+    source: подтверждено-экспертом
+    proof_link: "официальный Press Kit"
+    status: confirmed
+  - claim: "Базовый сетап: дарбука, бубен, 2 джембе, 2 бонго, 2 тарелки, малая перкуссия; расширенный сетап и LED-барабаны — по запросу"
+    value: "instrument setup"
+    source: подтверждено-экспертом
+    proof_link: "официальный Press Kit + Technical Rider"
     status: confirmed
 
 promises_to_prove_later:
