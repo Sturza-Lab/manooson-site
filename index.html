@@ -92,6 +92,7 @@
   }
   @media (min-width:640px){ .video-tile{width:200px} }
   .video-tile img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+  .video-tile video{width:100%;height:100%;object-fit:cover}
   .video-tile:hover img{transform:scale(1.05)}
   .video-tile .play{
     position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
@@ -400,7 +401,10 @@
     var tile = document.createElement('div');
     tile.className = 'video-tile';
     tile.innerHTML = '<img loading="lazy" src="assets/video/posters/'+name+'.jpg" alt="MANOO SON live"><div class="play"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5F2EA"><path d="M8 5v14l11-7z"/></svg></span></div>';
-    tile.addEventListener('click', function(){ openLightbox('video', 'assets/video/'+name+'.mp4'); });
+    tile.addEventListener('click', function(){
+      if(tile.querySelector('video')) return;
+      tile.innerHTML = '<video src="assets/video/'+name+'.mp4" controls autoplay playsinline></video>';
+    });
     grid.appendChild(tile);
   });
 
