@@ -239,27 +239,8 @@
 <!-- 1. HERO -->
 <section class="hero">
   <div class="hero-media">
-    <video id="heroVideo" autoplay muted loop playsinline poster="assets/photos/hero-poster.jpg">
-      <source src="assets/video/IMG_4442.mp4" type="video/mp4">
-    </video>
+    <img src="assets/photos/hero-neon.jpg" alt="MANOO SON with LED-lit drum kit" fetchpriority="high">
   </div>
-  <script>
-  (function(){
-    var v = document.getElementById('heroVideo');
-    var tryPlay = function(){ v.play().catch(function(){}); };
-    tryPlay();
-    v.addEventListener('canplay', tryPlay, {once:true});
-    v.addEventListener('loadeddata', tryPlay, {once:true});
-    ['touchstart','scroll','click'].forEach(function(evt){
-      document.addEventListener(evt, tryPlay, {once:true, passive:true});
-    });
-    if('IntersectionObserver' in window){
-      new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if(e.isIntersecting){ tryPlay(); } else { v.pause(); } });
-      }, {threshold:0}).observe(v);
-    }
-  })();
-  </script>
   <div class="wrap hero-content">
     <span class="eyebrow">Afro House · Live Percussion</span>
     <h1>He doesn't play behind the DJ. He plays with the room</h1>
@@ -441,7 +422,6 @@
   function playInline(tile, name){
     if(tile.querySelector('video')) return;
     document.querySelectorAll('.video-tile video').forEach(function(other){ other.pause(); });
-    document.getElementById('heroVideo').pause();
     tile.innerHTML = '<video src="assets/video/'+name+'.mp4" controls playsinline></video>';
     tile.querySelector('video').play().catch(function(){});
   }
