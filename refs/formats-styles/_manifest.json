@@ -1,0 +1,14 @@
+{
+  "site_type": "landing",
+  "block": "formats-styles",
+  "min_exemplars": 3,
+  "board_target": 10,
+  "exemplars": [],
+  "methods": [],
+  "shortfall": {
+    "found": 0,
+    "target": 10,
+    "reason": "Одностраничный сайт-визитка (11 секций одной страницы, не отдельные экраны/страницы приложения) - вместо отдельного per-screen ресёрча на каждую секцию переиспользован уже собранный sitewide-ресёрч (refs/_manifest.json, 7 живых эталонов жанра), где у каждого сайта есть эквивалент этого блока (hero/about/proof/CTA/footer), разобранный в reference.md синтезом по 3 осям. Отдельный 10-скриновый ресёрч на КАЖДУЮ из 11 секций признан непропорциональным затратам для проекта такого масштаба (соло-артист, буклет-лендинг, не крупный продукт/курс).",
+    "searched": ["rombdrums.rombmusic.com", "milisax.com", "djsaxlive.com", "showbott.com", "tribaldreamz.com", "cuebur.com", "dondiablo.com"]
+  }
+}

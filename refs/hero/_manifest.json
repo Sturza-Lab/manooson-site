@@ -1,0 +1,78 @@
+{
+  "site_type": "landing",
+  "block": "hero",
+  "min_exemplars": 3,
+  "board_target": 10,
+  "exemplars": [
+    {
+      "name": "Romb Drums",
+      "url": "https://rombdrums.rombmusic.com/",
+      "type": "landing",
+      "block": "hero",
+      "screenshot": "rombdrums-hero.png",
+      "why_works": "H1-обещание в лоб ('We are the pulse and heartbeat of your event') + двойной CTA (эмоция/рацио) + proof-бар площадок сразу под героем, без прокрутки",
+      "niche_relevant": "Собственный проверенный объект семьи того же типа и формата монетизации, голова Пула A"
+    },
+    {
+      "name": "Mili Sax",
+      "url": "https://www.milisax.com/",
+      "type": "landing",
+      "block": "hero",
+      "screenshot": "milisax-hero.png",
+      "why_works": "Портретный кадр с инструментом в руках на винно-красном градиенте, минимум текста, весь смысл несёт визуал артиста с инструментом",
+      "niche_relevant": "Точный тип - соло-артистка играет живой инструмент поверх DJ-сета"
+    },
+    {
+      "name": "DJ Sax Live",
+      "url": "https://www.djsaxlive.com/",
+      "type": "landing",
+      "block": "hero",
+      "screenshot": "djsaxlive-hero.png",
+      "why_works": "Крупный леттеринг поверх клубного фото с CTA 'Book now' прямо в первом экране - ноль трения между эмоцией и действием",
+      "niche_relevant": "Тот же формат (живой инструмент + DJ), паттерн 'CTA прямо в hero' переносим"
+    },
+    {
+      "name": "Cuebur",
+      "url": "https://cuebur.com/",
+      "type": "landing",
+      "block": "hero",
+      "screenshot": "cuebur-hero.png",
+      "why_works": "Статус-строка под героем (SA · 2010+ · DJ · Now) вместо длинного текста - мгновенный факт-снапшот артиста",
+      "niche_relevant": "Та же сцена Afro House, лучший найденный образец лаконичной подачи фактов"
+    },
+    {
+      "name": "Don Diablo",
+      "url": "https://www.dondiablo.com/",
+      "type": "landing",
+      "block": "hero",
+      "screenshot": "dondiablo-hero.png",
+      "why_works": "Кинематографичный full-bleed кадр с реального шоу (пиротехника, толпа) вместо студийного портрета - герой продаёт ЭНЕРГИЮ, не позу",
+      "niche_relevant": "Топ-уровень мирового артиста, образец кинематографичного видео/фото-героя, который прямо просила Мария ('Огонь по энергетике')"
+    },
+    {
+      "name": "Tribal DreamZ",
+      "url": "https://tribaldreamz.com/",
+      "type": "landing",
+      "block": "hero",
+      "screenshot": "tribaldreamz-hero.png",
+      "why_works": "Антипаттерн: шаблонный конструктор, жёлто-чёрная графика поверх портрета - показывает нижнюю границу качества, которую нельзя повторить",
+      "niche_relevant": "Тот же архетип артиста (соло DJ/перкуссионист, afro-house), полезен как образец 'как не надо'"
+    },
+    {
+      "name": "Drums+Decks",
+      "url": "https://showbott.com/artist/drums-and-decks/",
+      "type": "landing",
+      "block": "hero",
+      "screenshot": "drumsdecks-hero.png",
+      "why_works": "Формула позиционирования прямо в hero ('Mobile party DJ and live percussion package for hire') - точный словарь для подзаголовка, хоть и слабый визуал",
+      "niche_relevant": "Буквально тот же продукт (перкуссия+DJ), полезен для текста, не для дизайна hero"
+    }
+  ],
+  "methods": [],
+  "shortfall": {
+    "found": 7,
+    "target": 10,
+    "reason": "Те же 7 живых эталонов sitewide-доски (refs/_manifest.json) - у каждого есть герой, разобранный отдельно под задачу первого экрана. Узкая ниша не даёт больше стандалон-брендовых сайтов этого типа (см. shortfall sitewide-манифеста).",
+    "searched": ["contrabandevents.com", "scarlettentertainment.com", "gigsalad.com", "tailored-entertainment.com", "live-entertainment.co.uk", "it.stagend.com", "bjonesdj.com", "alpharhythmroots.com"]
+  }
+}
