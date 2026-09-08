@@ -1,0 +1,24 @@
+{
+  "phases": {
+    "0_blueprint": {
+      "approved": true,
+      "site_type": "landing",
+      "files": [
+        "blueprint.md",
+        "Design.md",
+        "voice-profile.md",
+        "offer-canon.md"
+      ],
+      "facts_confirmed": 5,
+      "facts_pending": 0,
+      "audience_objections": 0,
+      "ts": 1788855382
+    },
+    "0_brief": {
+      "type": "landing",
+      "target_action": "whatsapp_booking",
+      "file": "brief.md",
+      "ts": 1788855424
+    }
+  }
+}

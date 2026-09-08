@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Technical Rider — MANOO SON</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0A; --surface:#151312; --ink:#F5F2EA; --ink-muted:#9A958C;
+    --magenta:#E0299B; --gold:#C9A24B; --border:rgba(201,162,75,0.25);
+    --font-display:'Bricolage Grotesque',sans-serif; --font-body:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font-body)}
+  @page{size:A4;margin:0}
+
+  .cover{
+    width:210mm;height:297mm;position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 18% 15%, rgba(224,41,155,.30), transparent 55%),
+      radial-gradient(circle at 85% 88%, rgba(201,162,75,.20), transparent 50%),
+      var(--bg);
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:22mm 20mm;
+    page-break-after:always;
+  }
+  .cover-top{display:flex;justify-content:space-between;align-items:flex-start}
+  .cover-eyebrow{font-size:10pt;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .cover-mid{margin-top:auto;margin-bottom:auto}
+  .cover-word{font-family:var(--font-display);font-weight:800;font-size:58pt;line-height:.98;color:var(--ink);letter-spacing:-.01em}
+  .cover-sub{font-family:var(--font-display);font-weight:600;font-size:20pt;color:var(--magenta);margin-top:10mm}
+  .cover-rule{width:32mm;height:1px;background:var(--gold);margin:8mm 0}
+  .cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;font-size:9pt;color:var(--ink-muted);letter-spacing:.05em}
+  .cover-bottom b{color:var(--gold);font-weight:600}
+
+  .page{width:210mm;height:297mm;position:relative;background:var(--bg);padding:24mm 20mm 26mm;page-break-after:always}
+  .page:last-child{page-break-after:auto}
+  .page-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--border);padding-bottom:5mm;margin-bottom:7mm}
+  .page-head .eyebrow{font-size:8.5pt;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .page-head .brand{font-family:var(--font-display);font-weight:800;font-size:11pt;letter-spacing:.04em}
+  h1{font-family:var(--font-display);font-weight:800;font-size:24pt;line-height:1.05;margin-bottom:4mm}
+  .lede{color:var(--ink-muted);font-size:10.5pt;line-height:1.5;max-width:150mm;margin-bottom:5mm}
+
+  .section-label{
+    font-family:var(--font-display);font-weight:600;font-size:13pt;color:var(--magenta);
+    margin-bottom:6mm;padding-bottom:2mm;border-bottom:1px solid var(--border);
+  }
+  .req{display:flex;gap:6mm;padding:3mm 0;border-bottom:1px solid var(--border);align-items:flex-start}
+  .req:last-child{border-bottom:none}
+  .req .n{
+    flex:0 0 auto;width:8mm;height:8mm;border-radius:50%;border:1px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-weight:600;font-size:9pt;color:var(--gold);
+  }
+  .req .t{font-size:10pt;line-height:1.45;color:var(--ink);padding-top:.5mm}
+  .req .t b{color:var(--gold);font-weight:600}
+  .req .t .note{display:block;margin-top:1mm;color:var(--ink-muted);font-size:9pt;font-style:italic}
+
+  .callout{
+    margin-top:5mm;padding:5mm 7mm;border:1px solid var(--magenta);background:rgba(224,41,155,.10);
+    border-radius:2px;
+  }
+  .callout .tag{font-size:8pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:2.5mm;display:block}
+  .callout p{font-size:10pt;color:var(--ink);line-height:1.55}
+
+  .extra-list{margin-top:2mm}
+  .extra-item{display:flex;gap:5mm;padding:4mm 0;border-bottom:1px dashed var(--border)}
+  .extra-item:last-child{border-bottom:none}
+  .extra-item .mark{color:var(--magenta);font-family:var(--font-display);font-weight:600}
+  .extra-item .t{font-size:10.5pt;color:var(--ink);line-height:1.5}
+
+  .footnote{margin-top:10mm;font-size:9pt;color:var(--ink-muted);font-style:italic;line-height:1.5}
+
+  .page-foot{
+    position:absolute;bottom:14mm;left:20mm;right:20mm;
+    display:flex;justify-content:space-between;font-size:8pt;color:var(--ink-muted);
+    letter-spacing:.05em;border-top:1px solid var(--border);padding-top:4mm;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-top">
+    <span class="cover-eyebrow">Afro House Live Percussion</span>
+    <span class="cover-eyebrow">@manooson.live</span>
+  </div>
+  <div class="cover-mid">
+    <div class="cover-word">MANOO<br>SON</div>
+    <div class="cover-rule"></div>
+    <div class="cover-sub">Technical Rider</div>
+  </div>
+  <div class="cover-bottom">
+    <span>Live Percussion Show</span>
+    <span><b>2026</b> Edition</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-head"><span class="eyebrow">Technical Rider</span><span class="brand">MANOO SON</span></div>
+  <h1>Core requirements</h1>
+  <p class="lede">Everything below is essential for the live percussion + DJ set to sound and look the way it's designed to. Please confirm all points with your sound engineer ahead of the event.</p>
+
+  <div class="req"><span class="n">01</span><span class="t">4 microphones for percussion <span class="note">Shure Beta 57A / SM57 / Audix i5</span></span></div>
+  <div class="req"><span class="n">02</span><span class="t">2 microphones for cymbals <span class="note">AKG C451 / Rode NT5 or any condenser mic</span></span></div>
+  <div class="req"><span class="n">03</span><span class="t">6 medium boom stands <span class="note">One for each microphone</span></span></div>
+  <div class="req"><span class="n">04</span><span class="t">6 XLR cables <span class="note">One for each microphone</span></span></div>
+  <div class="req"><span class="n">05</span><span class="t">2 active stage monitors <span class="note">If two are not available, 1 monitor is acceptable</span></span></div>
+  <div class="req"><span class="n">06</span><span class="t">Audio mixer with at least 6 available XLR inputs <span class="note">Position: the setup must be placed near the DJ booth</span></span></div>
+  <div class="req"><span class="n">07</span><span class="t">3 standard single-braced keyboard stands <span class="note">For drum mounting</span></span></div>
+  <div class="req"><span class="n">08</span><span class="t">2 standard cymbal stands <span class="note">Boom or straight</span></span></div>
+
+  <div class="callout">
+    <span class="tag">Critical point</span>
+    <p>A professional sound engineer must be on-site for the soundcheck and the performance to balance the percussion with the DJ set.</p>
+  </div>
+
+  <div class="page-foot"><span>MANOO SON · Technical Rider</span><span>Page 1 / 2</span></div>
+</div>
+
+<div class="page">
+  <div class="page-head"><span class="eyebrow">Technical Rider</span><span class="brand">MANOO SON</span></div>
+  <h1>Instruments &amp; logistics</h1>
+  <p class="lede">What the artist brings, the stage he needs, and how the setup travels.</p>
+
+  <div class="req"><span class="n">09</span><span class="t">Stage footprint: minimum 2m × 3m clear performative space, black or dark grey carpet/rug/mat surface <span class="note">For stand stability and noise isolation</span></span></div>
+
+  <div class="section-label" style="margin-top:8mm">Instruments brought by the artist</div>
+  <div class="extra-list">
+    <div class="extra-item"><span class="mark">✦</span><span class="t">Darbuka (1×), Djembe (2×), Bongo (2×), Cymbals (2×)</span></div>
+    <div class="extra-item"><span class="mark">✦</span><span class="t">Small percussion: tambourine, naff, maracas</span></div>
+    <div class="extra-item"><span class="mark">✦</span><span class="t">Total instrument weight ~30 kg (excluding stands)</span></div>
+    <div class="extra-item"><span class="mark">✦</span><span class="t">Extended percussion setup, additional drums/cymbals and LED drums available on request</span></div>
+  </div>
+
+  <div class="section-label" style="margin-top:10mm">Alternative: full local instrument rental</div>
+  <p class="lede" style="margin-bottom:0">If the venue/promoter prefers to source the instrument setup locally to save on flight baggage costs, our technical team must contact the rental provider directly prior to confirmation to approve instrument specifications and quality.</p>
+
+  <p class="footnote">Note: if any of the above cannot be provided, please inform us in advance.</p>
+
+  <div class="page-foot"><span>MANOO SON · Technical Rider</span><span>Page 2 / 2</span></div>
+</div>
+
+</body>
+</html>

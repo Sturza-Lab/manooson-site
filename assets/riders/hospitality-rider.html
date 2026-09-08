@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hospitality Rider — MANOO SON</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0A; --surface:#151312; --ink:#F5F2EA; --ink-muted:#9A958C;
+    --magenta:#E0299B; --gold:#C9A24B; --border:rgba(201,162,75,0.25);
+    --font-display:'Bricolage Grotesque',sans-serif; --font-body:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font-body)}
+  @page{size:A4;margin:0}
+
+  .cover{
+    width:210mm;height:297mm;position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 82% 15%, rgba(201,162,75,.25), transparent 55%),
+      radial-gradient(circle at 15% 88%, rgba(224,41,155,.28), transparent 50%),
+      var(--bg);
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:22mm 20mm;
+    page-break-after:always;
+  }
+  .cover-top{display:flex;justify-content:space-between;align-items:flex-start}
+  .cover-eyebrow{font-size:10pt;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .cover-mid{margin-top:auto;margin-bottom:auto}
+  .cover-word{font-family:var(--font-display);font-weight:800;font-size:58pt;line-height:.98;color:var(--ink);letter-spacing:-.01em}
+  .cover-sub{font-family:var(--font-display);font-weight:600;font-size:20pt;color:var(--magenta);margin-top:10mm}
+  .cover-rule{width:32mm;height:1px;background:var(--gold);margin:8mm 0}
+  .cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;font-size:9pt;color:var(--ink-muted);letter-spacing:.05em}
+  .cover-bottom b{color:var(--gold);font-weight:600}
+
+  .page{width:210mm;height:297mm;position:relative;background:var(--bg);padding:24mm 20mm 26mm}
+  .page-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--border);padding-bottom:6mm;margin-bottom:10mm}
+  .page-head .eyebrow{font-size:8.5pt;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .page-head .brand{font-family:var(--font-display);font-weight:800;font-size:11pt;letter-spacing:.04em}
+  h1{font-family:var(--font-display);font-weight:800;font-size:27pt;line-height:1.05;margin-bottom:5mm}
+  .lede{color:var(--ink-muted);font-size:10.5pt;line-height:1.6;max-width:150mm;margin-bottom:10mm}
+
+  .req{display:flex;gap:6mm;padding:4.6mm 0;border-bottom:1px solid var(--border);align-items:flex-start}
+  .req:last-child{border-bottom:none}
+  .req .n{
+    flex:0 0 auto;width:9mm;height:9mm;border-radius:50%;border:1px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-weight:600;font-size:9.5pt;color:var(--gold);
+  }
+  .req .t{font-size:10.5pt;line-height:1.5;color:var(--ink);padding-top:.5mm}
+  .req .t .note{display:block;margin-top:1.5mm;color:var(--ink-muted);font-size:9pt;font-style:italic}
+
+  .footnote{margin-top:9mm;font-size:9pt;color:var(--ink-muted);font-style:italic;line-height:1.5}
+
+  .page-foot{
+    position:absolute;bottom:14mm;left:20mm;right:20mm;
+    display:flex;justify-content:space-between;font-size:8pt;color:var(--ink-muted);
+    letter-spacing:.05em;border-top:1px solid var(--border);padding-top:4mm;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-top">
+    <span class="cover-eyebrow">Afro House Live Percussion</span>
+    <span class="cover-eyebrow">@manooson.live</span>
+  </div>
+  <div class="cover-mid">
+    <div class="cover-word">MANOO<br>SON</div>
+    <div class="cover-rule"></div>
+    <div class="cover-sub">Hospitality Rider</div>
+  </div>
+  <div class="cover-bottom">
+    <span>Live Percussion Show</span>
+    <span><b>2026</b> Edition</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-head"><span class="eyebrow">Hospitality Rider</span><span class="brand">MANOO SON</span></div>
+  <h1>Before the show</h1>
+  <p class="lede">A short list that keeps the artist rested, fed and ready to give your event everything he's got. Basic version — the artist may confirm additional points ahead of specific bookings.</p>
+
+  <div class="req"><span class="n">01</span><span class="t">Hot meal for the artist on the day of the event</span></div>
+  <div class="req"><span class="n">02</span><span class="t">Hotel accommodation, minimum 4-star, for touring dates <span class="note">Organizer side</span></span></div>
+  <div class="req"><span class="n">03</span><span class="t">Flights and local transfers covered by the client/organizer <span class="note">Organizer side</span></span></div>
+  <div class="req"><span class="n">04</span><span class="t">3 bottles of still water, room temperature</span></div>
+  <div class="req"><span class="n">05</span><span class="t">2 clean towels</span></div>
+  <div class="req"><span class="n">06</span><span class="t">Safe area for instrument cases, changing clothes and resting between performances</span></div>
+  <div class="req"><span class="n">07</span><span class="t">Stage fan</span></div>
+  <div class="req"><span class="n">08</span><span class="t">Extra checked baggage allowance pre-booked for instrument transport <span class="note">~30 kg total, 1×30kg or 2×15kg — airport excess fees on-site are significantly higher and non-refundable</span></span></div>
+
+  <p class="footnote">Basic rider — the artist will add further personal requests before the final version.</p>
+
+  <div class="page-foot"><span>MANOO SON · Hospitality Rider</span><span>Page 1 / 1</span></div>
+</div>
+
+</body>
+</html>
