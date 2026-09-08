@@ -253,6 +253,11 @@
     ['touchstart','scroll','click'].forEach(function(evt){
       document.addEventListener(evt, tryPlay, {once:true, passive:true});
     });
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ tryPlay(); } else { v.pause(); } });
+      }, {threshold:0}).observe(v);
+    }
   })();
   </script>
   <div class="wrap hero-content">
@@ -435,6 +440,8 @@
   var grid = document.getElementById('videoGrid');
   function playInline(tile, name){
     if(tile.querySelector('video')) return;
+    document.querySelectorAll('.video-tile video').forEach(function(other){ other.pause(); });
+    document.getElementById('heroVideo').pause();
     tile.innerHTML = '<video src="assets/video/'+name+'.mp4" controls playsinline></video>';
     tile.querySelector('video').play().catch(function(){});
   }
