@@ -29,6 +29,87 @@
       "approved": true,
       "board": "refs",
       "ts": 1788856843
+    },
+    "2c_synthesis": {
+      "file": "reference.md",
+      "ts": 1788856907
+    },
+    "2a_seeds": {
+      "source": "reference.md + refs/_manifest.json",
+      "ts": 1788856960
+    },
+    "3a_structure": {
+      "approved": true,
+      "ts": 1788857481
     }
-  }
+  },
+  "screens": [
+    {
+      "name": "hero",
+      "role": "захват+оффер",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "video",
+      "role": "видео-showcase",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "proof-bar",
+      "role": "снятие возражения об уровне",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "about",
+      "role": "био/факты",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "hear-the-difference",
+      "role": "аудио-доказательство",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "formats-styles",
+      "role": "снятие возражения о формате",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "venues-wall",
+      "role": "масштаб через объём",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "photo-gallery",
+      "role": "вторичный визуал",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "reviews",
+      "role": "соц.доказательство чужим голосом",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "booking-cta",
+      "role": "финальная конверсия",
+      "status": "pending",
+      "score": null
+    },
+    {
+      "name": "footer",
+      "role": "райдеры+соцсети",
+      "status": "pending",
+      "score": null
+    }
+  ],
+  "stage": "screens"
 }
