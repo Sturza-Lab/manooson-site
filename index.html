@@ -137,6 +137,8 @@
   .diff-bars span:nth-child(2n){animation-delay:.15s}
   .diff-bars span:nth-child(3n){animation-delay:.3s}
   @keyframes bar{ 0%,100%{height:20%} 50%{height:85%} }
+  .diff-play.loading svg{animation:spin .8s linear infinite}
+  @keyframes spin{ to{transform:rotate(360deg)} }
 
   /* ===== FORMATS ===== */
   .fmt-list{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:0}
@@ -306,7 +308,7 @@
         </button>
         <div class="diff-bars" id="diffBars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </div>
-      <audio id="diffAudio" src="assets/audio/without-me.mp3" preload="none"></audio>
+      <audio id="diffAudio" src="assets/audio/without-me.mp3" preload="metadata"></audio>
     </div>
   </div>
 </section>
@@ -490,6 +492,11 @@
   var tabs = wrap.querySelectorAll('.diff-tab');
   var playIcon = '<path d="M8 5v14l11-7z"/>';
   var pauseIcon = '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
+  var loadingIcon = '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="40 14"/>';
+  function setLoading(on){
+    playBtn.classList.toggle('loading', on);
+    if(on){ icon.innerHTML = loadingIcon; }
+  }
 
   tabs.forEach(function(tab){
     tab.addEventListener('click', function(){
@@ -497,14 +504,15 @@
       tab.classList.add('active');
       var wasPlaying = !audio.paused;
       audio.src = tab.getAttribute('data-src');
-      if(wasPlaying){ audio.play(); }
+      if(wasPlaying){ setLoading(true); audio.play().catch(function(){ setLoading(false); }); }
     });
   });
   playBtn.addEventListener('click', function(){
-    if(audio.paused){ audio.play(); } else { audio.pause(); }
+    if(audio.paused){ setLoading(true); audio.play().catch(function(){ setLoading(false); }); } else { audio.pause(); }
   });
-  audio.addEventListener('play', function(){ icon.innerHTML = pauseIcon; bars.classList.add('playing'); });
-  audio.addEventListener('pause', function(){ icon.innerHTML = playIcon; bars.classList.remove('playing'); });
+  audio.addEventListener('waiting', function(){ setLoading(true); });
+  audio.addEventListener('playing', function(){ setLoading(false); icon.innerHTML = pauseIcon; bars.classList.add('playing'); });
+  audio.addEventListener('pause', function(){ setLoading(false); icon.innerHTML = playIcon; bars.classList.remove('playing'); });
   audio.addEventListener('ended', function(){ icon.innerHTML = playIcon; bars.classList.remove('playing'); });
 
   // Reviews - Firebase-ready shell. Config left as placeholder until Мария creates
