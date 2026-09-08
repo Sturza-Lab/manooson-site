@@ -227,10 +227,22 @@
 <!-- 1. HERO -->
 <section class="hero">
   <div class="hero-media">
-    <video autoplay muted loop playsinline poster="assets/photos/hero-poster.jpg">
+    <video id="heroVideo" autoplay muted loop playsinline poster="assets/photos/hero-poster.jpg">
       <source src="assets/video/IMG_4442.mp4" type="video/mp4">
     </video>
   </div>
+  <script>
+  (function(){
+    var v = document.getElementById('heroVideo');
+    var tryPlay = function(){ v.play().catch(function(){}); };
+    tryPlay();
+    v.addEventListener('canplay', tryPlay, {once:true});
+    v.addEventListener('loadeddata', tryPlay, {once:true});
+    ['touchstart','scroll','click'].forEach(function(evt){
+      document.addEventListener(evt, tryPlay, {once:true, passive:true});
+    });
+  })();
+  </script>
   <div class="wrap hero-content">
     <span class="eyebrow">Afro House · Live Percussion</span>
     <h1>He doesn't play behind the DJ. He plays with the room</h1>
