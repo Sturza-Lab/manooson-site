@@ -35,7 +35,8 @@
   .cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;font-size:9pt;color:var(--ink-muted);letter-spacing:.05em}
   .cover-bottom b{color:var(--gold);font-weight:600}
 
-  .page{width:210mm;height:297mm;position:relative;background:var(--bg);padding:24mm 20mm 26mm}
+  .page{width:210mm;height:297mm;position:relative;background:var(--bg);padding:24mm 20mm 26mm;page-break-after:always}
+  .page:last-child{page-break-after:auto}
   .page-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--border);padding-bottom:6mm;margin-bottom:10mm}
   .page-head .eyebrow{font-size:8.5pt;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
   .page-head .brand{font-family:var(--font-display);font-weight:800;font-size:11pt;letter-spacing:.04em}
@@ -51,6 +52,24 @@
   }
   .req .t{font-size:10.5pt;line-height:1.5;color:var(--ink);padding-top:.5mm}
   .req .t .note{display:block;margin-top:1.5mm;color:var(--ink-muted);font-size:9pt;font-style:italic}
+
+  .section-label{
+    font-family:var(--font-display);font-weight:600;font-size:13pt;color:var(--magenta);
+    margin-bottom:5mm;padding-bottom:2mm;border-bottom:1px solid var(--border);
+  }
+  .extra-list{margin-top:2mm;margin-bottom:8mm}
+  .extra-item{display:flex;gap:5mm;padding:3.2mm 0;border-bottom:1px dashed var(--border)}
+  .extra-item:last-child{border-bottom:none}
+  .extra-item .mark{color:var(--magenta);font-family:var(--font-display);font-weight:600}
+  .extra-item .t{font-size:10pt;color:var(--ink);line-height:1.5}
+  .extra-item .t b{color:var(--gold);font-weight:600}
+
+  .callout{
+    margin-top:2mm;margin-bottom:8mm;padding:5mm 7mm;border:1px solid var(--magenta);background:rgba(224,41,155,.10);
+    border-radius:2px;
+  }
+  .callout .tag{font-size:8pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:2.5mm;display:block}
+  .callout p{font-size:10pt;color:var(--ink);line-height:1.55}
 
   .footnote{margin-top:9mm;font-size:9pt;color:var(--ink-muted);font-style:italic;line-height:1.5}
 
@@ -81,21 +100,55 @@
 
 <div class="page">
   <div class="page-head"><span class="eyebrow">Hospitality Rider</span><span class="brand">MANOO SON</span></div>
-  <h1>Before the show</h1>
-  <p class="lede">A short list that keeps the artist rested, fed and ready to give your event everything he's got. Basic version — the artist may confirm additional points ahead of specific bookings.</p>
+  <h1>Travel &amp; stay</h1>
+  <p class="lede">Everything that keeps the artist rested, fed and on time for your event. Please confirm all points with the Organizer ahead of the booking.</p>
 
-  <div class="req"><span class="n">01</span><span class="t">Hot meal for the artist on the day of the event</span></div>
-  <div class="req"><span class="n">02</span><span class="t">Hotel accommodation, minimum 4-star, for touring dates <span class="note">Organizer side</span></span></div>
-  <div class="req"><span class="n">03</span><span class="t">Flights and local transfers covered by the client/organizer <span class="note">Organizer side</span></span></div>
-  <div class="req"><span class="n">04</span><span class="t">3 bottles of still water, room temperature</span></div>
-  <div class="req"><span class="n">05</span><span class="t">2 clean towels</span></div>
-  <div class="req"><span class="n">06</span><span class="t">Safe area for instrument cases, changing clothes and resting between performances</span></div>
-  <div class="req"><span class="n">07</span><span class="t">Stage fan</span></div>
-  <div class="req"><span class="n">08</span><span class="t">Extra checked baggage allowance pre-booked for instrument transport <span class="note">~30 kg total, 1×30kg or 2×15kg — airport excess fees on-site are significantly higher and non-refundable</span></span></div>
+  <div class="section-label">01 · Accommodation &amp; meals</div>
+  <div class="extra-list">
+    <div class="extra-item"><span class="mark">✦</span><span class="t"><b>Hotel:</b> 4-star or 5-star accommodation provided and fully covered by the Organizer</span></div>
+    <div class="extra-item"><span class="mark">✦</span><span class="t"><b>Catering / daily allowance:</b> full meal coverage or a daily catering allowance for the Artist on performance day(s)</span></div>
+  </div>
 
-  <p class="footnote">Basic rider — the artist will add further personal requests before the final version.</p>
+  <div class="section-label">02 · Ground transportation</div>
+  <div class="extra-list">
+    <div class="extra-item"><span class="mark">✦</span><span class="t"><b>Local logistics:</b> the Organizer provides/covers all ground transfers — Airport ↔ Hotel ↔ Venue / Soundcheck / Show</span></div>
+  </div>
 
-  <div class="page-foot"><span>MANOO SON · Hospitality Rider</span><span>Page 1 / 1</span></div>
+  <div class="section-label">03 · Air travel</div>
+  <div class="extra-list">
+    <div class="extra-item"><span class="mark">✦</span><span class="t"><b>Flights:</b> all required round-trip airfare to and from the performance destination, arranged and fully covered by the Organizer</span></div>
+    <div class="extra-item"><span class="mark">✦</span><span class="t"><b>Baggage:</b> the Organizer also covers checked baggage and excess/oversized baggage fees for instruments, percussion equipment and personal luggage</span></div>
+  </div>
+
+  <div class="page-foot"><span>MANOO SON · Hospitality Rider</span><span>Page 1 / 2</span></div>
+</div>
+
+<div class="page">
+  <div class="page-head"><span class="eyebrow">Hospitality Rider</span><span class="brand">MANOO SON</span></div>
+  <h1>At the venue</h1>
+  <p class="lede">What the venue needs to have ready before the artist arrives.</p>
+
+  <div class="section-label">04 · Stage assistance &amp; load-in</div>
+  <div class="callout">
+    <span class="tag">Critical point</span>
+    <p>Minimum 1–2 designated venue staff members required upon arrival to assist with loading, carrying heavy percussion equipment to the stage, and re-loading it back into the vehicle post-show.</p>
+  </div>
+
+  <div class="section-label">05 · Dressing room (green room)</div>
+  <div class="extra-list">
+    <div class="extra-item"><span class="mark">✦</span><span class="t"><b>Private space:</b> a clean, secure and lockable dressing room at the venue</span></div>
+    <div class="extra-item"><span class="mark">✦</span><span class="t"><b>Usage:</b> storage for heavy flight cases/instrument cases, changing area, and artist rest zone between sets</span></div>
+    <div class="extra-item"><span class="mark">✦</span><span class="t"><b>Amenities:</b> 3× bottles of still, room-temperature water and 3× clean, dry hand towels in the dressing room prior to the artist's arrival</span></div>
+  </div>
+
+  <div class="section-label">06 · On-stage requirements</div>
+  <div class="extra-list">
+    <div class="extra-item"><span class="mark">✦</span><span class="t">1× powerful personal stage fan, placed facing the artist's spot</span></div>
+  </div>
+
+  <p class="footnote">Note: if any of the above cannot be provided, please inform us in advance.</p>
+
+  <div class="page-foot"><span>MANOO SON · Hospitality Rider</span><span>Page 2 / 2</span></div>
 </div>
 
 </body>
