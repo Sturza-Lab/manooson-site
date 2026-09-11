@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Leave a review - MANOO SON</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C9A24B' stroke-width='6'/%3E%3C/svg%3E">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0A; --surface:#151312;
+    --gold:#C9A24B; --magenta:#E0299B;
+    --text:#F5F2EA; --text-muted:#9A958C; --border:rgba(201,162,75,.22);
+    --font-display:'Bricolage Grotesque',sans-serif; --font-body:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);
+    -webkit-font-smoothing:antialiased;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:32px 20px;
+  }
+  .wrap{width:100%;max-width:480px}
+  .brand{font-family:var(--font-display);font-weight:800;font-size:15px;letter-spacing:.04em;color:var(--text-muted);margin-bottom:6px}
+  h1{font-family:var(--font-display);font-weight:800;font-size:26px;line-height:1.15;margin:0 0 10px}
+  .lede{color:var(--text-muted);font-size:14px;line-height:1.55;margin-bottom:28px}
+
+  .review-form{padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:4px}
+  .review-form label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;margin-top:16px}
+  .review-form label:first-child{margin-top:0}
+  .review-form input, .review-form textarea{
+    width:100%;background:var(--bg);border:1px solid var(--border);border-radius:2px;color:var(--text);
+    font-family:var(--font-body);font-size:14px;padding:10px 12px;
+  }
+  .review-form input:focus, .review-form textarea:focus{outline:none;border-color:var(--gold)}
+  .review-form textarea{min-height:110px;resize:vertical}
+  .review-form .website-field{position:absolute;left:-9999px;opacity:0}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:2px;font-family:var(--font-display);font-weight:600;font-size:14px;cursor:pointer;border:none;text-decoration:none}
+  .btn-primary{background:var(--magenta);color:#fff}
+  .review-form .btn{margin-top:20px;width:100%}
+  .review-msg{margin-top:14px;font-size:13px;color:var(--gold)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="brand">MANOO·SON</div>
+  <h1>Leave a review</h1>
+  <p class="lede">Tell the room what happened - your review goes straight onto the site.</p>
+
+  <form class="review-form" id="reviewForm">
+    <label for="rvName">Name</label>
+    <input type="text" id="rvName" name="name" required maxlength="60">
+    <label for="rvRole">Your role &amp; venue</label>
+    <input type="text" id="rvRole" name="role" required maxlength="90" placeholder="e.g. Art Director, ZION">
+    <label for="rvText">Your review</label>
+    <textarea id="rvText" name="text" required maxlength="400"></textarea>
+    <div class="website-field" aria-hidden="true"><label for="rvWebsite">Website</label><input type="text" id="rvWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+    <button type="submit" class="btn btn-primary">Post review</button>
+    <div class="review-msg" id="reviewMsg" hidden></div>
+  </form>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+<script>
+(function(){
+  var firebaseConfig = {
+    apiKey: "AIzaSyAnIj6rgL0x2quK3UhQJO9BkqpdExuzTP8",
+    authDomain: "maria-sturza.firebaseapp.com",
+    projectId: "maria-sturza",
+    storageBucket: "maria-sturza.firebasestorage.app",
+    messagingSenderId: "226457059477",
+    appId: "1:226457059477:web:7332d2eb61fd8c7baa1b9c"
+  };
+  firebase.initializeApp(firebaseConfig);
+  var reviewsCol = firebase.firestore().collection('reviews');
+
+  var form = document.getElementById('reviewForm');
+  var msg = document.getElementById('reviewMsg');
+  var submittingReview = false;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(form.website.value){ return; } // honeypot
+    if(submittingReview){ return; }
+    submittingReview = true;
+    reviewsCol.add({
+      name: form.name.value.trim().slice(0, 60),
+      role: form.role.value.trim().slice(0, 90),
+      text: form.text.value.trim().slice(0, 400),
+      ts: firebase.firestore.FieldValue.serverTimestamp()
+    }).then(function(){
+      form.reset();
+      msg.hidden = false;
+      msg.textContent = 'Thank you! Your review is live on the site.';
+    }).catch(function(){
+      msg.hidden = false;
+      msg.textContent = 'Something went wrong - please try again in a moment.';
+    }).finally(function(){
+      submittingReview = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>

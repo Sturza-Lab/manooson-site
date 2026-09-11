@@ -186,19 +186,6 @@
   .review-card .role{font-size:12px;color:var(--text-muted)}
   .review-empty{color:var(--text-muted);font-size:15px;font-style:italic}
 
-  .review-form{margin-top:44px;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:4px;max-width:520px}
-  .review-form label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;margin-top:16px}
-  .review-form label:first-child{margin-top:0}
-  .review-form input, .review-form textarea{
-    width:100%;background:var(--bg);border:1px solid var(--border);border-radius:2px;color:var(--text);
-    padding:12px 14px;font-family:var(--font-body);font-size:15px;resize:vertical;
-  }
-  .review-form input:focus, .review-form textarea:focus{outline:none;border-color:var(--gold)}
-  .review-form textarea{min-height:90px}
-  .review-form .website-field{position:absolute;left:-9999px;opacity:0}
-  .review-form .btn{margin-top:20px;width:100%;justify-content:center}
-  .review-msg{margin-top:12px;font-size:13px;color:var(--gold)}
-
   /* ===== BOOKING CTA ===== */
   .cta-final{
     background:radial-gradient(circle at 30% 20%, rgba(224,41,155,.18), transparent 55%), var(--surface);
@@ -372,19 +359,6 @@
     <div class="review-track" id="reviewTrack">
       <p class="review-empty">Be the first to tell the room what happened.</p>
     </div>
-
-    <form class="review-form" id="reviewForm">
-      <h3 style="margin-bottom:0;font-size:18px">Leave a review</h3>
-      <label for="rvName">Name</label>
-      <input type="text" id="rvName" name="name" required maxlength="60">
-      <label for="rvRole">Your role &amp; venue</label>
-      <input type="text" id="rvRole" name="role" required maxlength="90" placeholder="e.g. Art Director, ZION">
-      <label for="rvText">Your review</label>
-      <textarea id="rvText" name="text" required maxlength="400"></textarea>
-      <div class="website-field" aria-hidden="true"><label for="rvWebsite">Website</label><input type="text" id="rvWebsite" name="website" tabindex="-1" autocomplete="off"></div>
-      <button type="submit" class="btn btn-primary">Post review</button>
-      <div class="review-msg" id="reviewMsg" hidden></div>
-    </form>
   </div>
 </section>
 
@@ -566,31 +540,6 @@
     snapshot.forEach(function(doc){ renderReview(reviewTrack, doc.data()); });
   }, function(err){
     console.error('reviews listener failed', err);
-  });
-
-  var form = document.getElementById('reviewForm');
-  var msg = document.getElementById('reviewMsg');
-  var submittingReview = false;
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(form.website.value){ return; } // honeypot
-    if(submittingReview){ return; }
-    submittingReview = true;
-    reviewsCol.add({
-      name: form.name.value.trim().slice(0, 60),
-      role: form.role.value.trim().slice(0, 90),
-      text: form.text.value.trim().slice(0, 400),
-      ts: firebase.firestore.FieldValue.serverTimestamp()
-    }).then(function(){
-      form.reset();
-      msg.hidden = false;
-      msg.textContent = 'Thank you! Your review is live.';
-    }).catch(function(){
-      msg.hidden = false;
-      msg.textContent = 'Something went wrong - please try again in a moment.';
-    }).finally(function(){
-      submittingReview = false;
-    });
   });
 })();
 </script>
