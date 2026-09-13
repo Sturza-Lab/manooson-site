@@ -197,13 +197,21 @@
     padding:10px 16px;font-size:13px;text-decoration:none;color:var(--text-muted);
   }
   .footer-links a:hover{border-color:var(--gold);color:var(--gold)}
-  .footer-doc{
-    font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.02em;
-    color:var(--text);border:1.5px solid var(--magenta);background:rgba(212,175,55,.1);
-    padding:13px 22px;border-radius:3px;transition:background .2s ease,color .2s ease;
+
+  /* ===== PRESS & RIDERS ===== */
+  .docs-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 0}
+  .docs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:28px}
+  .doc-card{
+    display:flex;flex-direction:column;gap:12px;padding:28px 24px;border:1.5px solid var(--magenta);border-radius:4px;
+    background:rgba(212,175,55,.07);text-decoration:none;color:var(--text);
+    transition:background .2s ease,color .2s ease,transform .2s ease;
   }
-  .footer-doc:hover{background:var(--magenta);color:#0A0A0A;border-color:var(--magenta)}
-  .footer-doc svg{flex:0 0 auto}
+  .doc-card:hover{background:var(--magenta);color:#0A0A0A;transform:translateY(-3px)}
+  .doc-card svg{color:var(--magenta);transition:color .2s ease}
+  .doc-card:hover svg{color:#0A0A0A}
+  .doc-card-title{font-family:var(--font-display);font-weight:800;font-size:19px}
+  .doc-card-sub{font-size:13px;color:var(--text-muted);transition:color .2s ease}
+  .doc-card:hover .doc-card-sub{color:#0A0A0A;opacity:.75}
   .footer-copy{font-size:12px;color:var(--text-muted)}
 
   /* ===== LIGHTBOX ===== */
@@ -353,13 +361,35 @@
   </div>
 </div>
 
+<!-- 10.5 PRESS & RIDERS -->
+<section class="docs-section">
+  <div class="wrap">
+    <span class="eyebrow">For Promoters &amp; Venues</span>
+    <h2 style="margin-bottom:0">Press Kit &amp; Riders</h2>
+    <div class="docs-grid">
+      <a class="doc-card" href="assets/presskit/press-kit.pdf" target="_blank" rel="noopener">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+        <span class="doc-card-title">Press Kit</span>
+        <span class="doc-card-sub">Download PDF</span>
+      </a>
+      <a class="doc-card" href="assets/riders/technical-rider.pdf" target="_blank" rel="noopener">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+        <span class="doc-card-title">Technical Rider</span>
+        <span class="doc-card-sub">Download PDF</span>
+      </a>
+      <a class="doc-card" href="assets/riders/hospitality-rider.pdf" target="_blank" rel="noopener">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+        <span class="doc-card-title">Hospitality Rider</span>
+        <span class="doc-card-sub">Download PDF</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- 11. FOOTER -->
 <footer>
   <div class="wrap footer-row">
     <div class="footer-links">
-      <a class="footer-doc" href="assets/presskit/press-kit.pdf" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Press Kit (PDF)</a>
-      <a class="footer-doc" href="assets/riders/technical-rider.pdf" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Technical Rider (PDF)</a>
-      <a class="footer-doc" href="assets/riders/hospitality-rider.pdf" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Hospitality Rider (PDF)</a>
       <a href="https://instagram.com/manooson.live" target="_blank" rel="noopener">@manooson.live</a>
     </div>
     <span class="footer-copy">© 2026 MANOO SON</span>
