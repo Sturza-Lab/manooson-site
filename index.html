@@ -125,7 +125,8 @@
     flex:1;padding:16px;background:none;border:none;border-bottom:2px solid transparent;color:var(--text-muted);
     font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;
   }
-  .diff-tab.active{color:var(--magenta);border-bottom-color:var(--magenta)}
+  .diff-tab.active{border-bottom-color:currentColor}
+  .diff-tab-highlight{color:var(--magenta)}
   .diff-controls{display:flex;align-items:center;gap:20px;padding:24px}
   .diff-play{
     flex:0 0 auto;width:56px;height:56px;border-radius:50%;border:1px solid var(--gold);background:transparent;
@@ -286,8 +287,8 @@
     <p class="lede">Compare how live djembe and darbuka layers add physical resonance, drive, and mainstage energy to a standard track.</p>
     <div class="diff-player" id="diffPlayer">
       <div class="diff-tabs">
-        <button class="diff-tab active" data-src="assets/audio/without-me.mp3">Without him</button>
-        <button class="diff-tab" data-src="assets/audio/with-me.mp3">With him</button>
+        <button class="diff-tab active" data-src="assets/audio/without-me.mp3">Standard Track</button>
+        <button class="diff-tab diff-tab-highlight" data-src="assets/audio/with-me.mp3">With Drums</button>
       </div>
       <div class="diff-controls">
         <button class="diff-play" id="diffPlay" aria-label="Play">
