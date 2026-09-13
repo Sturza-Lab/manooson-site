@@ -141,10 +141,9 @@
   .marquee::before,.marquee::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:1;pointer-events:none}
   .marquee::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
   .marquee::after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
-  .marquee-track{display:inline-block;animation:scroll 38s linear infinite}
+  .marquee-track{display:inline-block;will-change:transform}
   .marquee-track span{font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--text-muted);padding:0 18px}
   .marquee-track span.dot{color:var(--gold)}
-  @keyframes scroll{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
   /* ===== PHOTO GALLERY ===== */
   .photo-hint{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted);margin:8px 0 0}
@@ -437,6 +436,24 @@
     return html;
   }
   track.innerHTML = renderVenues() + renderVenues();
+
+  // JS-driven scroll (not pure CSS animation) - CSS keyframe animations can
+  // silently freeze on iOS under Low Power Mode; requestAnimationFrame does not.
+  (function(){
+    var pos = 0, lastTs = null;
+    function tick(ts){
+      var half = track.scrollWidth / 2;
+      if(lastTs !== null && half > 0){
+        var dt = ts - lastTs;
+        pos -= (half / 38000) * dt;
+        if(pos <= -half){ pos += half; }
+        track.style.transform = 'translateX(' + pos + 'px)';
+      }
+      lastTs = ts;
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
 
   var lightbox = document.getElementById('lightbox');
   var lightboxContent = document.getElementById('lightboxContent');
