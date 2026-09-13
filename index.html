@@ -197,6 +197,13 @@
     padding:10px 16px;font-size:13px;text-decoration:none;color:var(--text-muted);
   }
   .footer-links a:hover{border-color:var(--gold);color:var(--gold)}
+  .footer-doc{
+    font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.02em;
+    color:var(--text);border:1.5px solid var(--magenta);background:rgba(212,175,55,.1);
+    padding:13px 22px;border-radius:3px;transition:background .2s ease,color .2s ease;
+  }
+  .footer-doc:hover{background:var(--magenta);color:#0A0A0A;border-color:var(--magenta)}
+  .footer-doc svg{flex:0 0 auto}
   .footer-copy{font-size:12px;color:var(--text-muted)}
 
   /* ===== LIGHTBOX ===== */
@@ -350,9 +357,9 @@
 <footer>
   <div class="wrap footer-row">
     <div class="footer-links">
-      <a href="assets/presskit/press-kit.pdf" target="_blank" rel="noopener">Press Kit (PDF)</a>
-      <a href="assets/riders/technical-rider.pdf" target="_blank" rel="noopener">Technical Rider (PDF)</a>
-      <a href="assets/riders/hospitality-rider.pdf" target="_blank" rel="noopener">Hospitality Rider (PDF)</a>
+      <a class="footer-doc" href="assets/presskit/press-kit.pdf" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Press Kit (PDF)</a>
+      <a class="footer-doc" href="assets/riders/technical-rider.pdf" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Technical Rider (PDF)</a>
+      <a class="footer-doc" href="assets/riders/hospitality-rider.pdf" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Hospitality Rider (PDF)</a>
       <a href="https://instagram.com/manooson.live" target="_blank" rel="noopener">@manooson.live</a>
     </div>
     <span class="footer-copy">© 2026 MANOO SON</span>
